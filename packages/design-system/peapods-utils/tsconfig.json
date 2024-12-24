@@ -1,0 +1,3 @@
+{
+  "extends": "@peapods/typescript-config/react-library.json"
+}

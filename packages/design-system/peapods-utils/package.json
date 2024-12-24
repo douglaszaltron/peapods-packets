@@ -1,0 +1,41 @@
+{
+  "name": "@peapods/utils",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Peapods Team",
+  "description": "Essential React utility functions.",
+  "main": "src/index.ts",
+  "files": ["dist/**"],
+  "scripts": {
+    "build": "tsup",
+    "check": "biome check",
+    "format": "biome check --write",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@peapods/biome-config": "workspace:^",
+    "@peapods/typescript-config": "workspace:^",
+    "react": "^19.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "tsup": {
+    "entry": ["src/index.ts"],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "dts": true,
+    "format": "cjs",
+    "external": ["react"]
+  },
+  "publishConfig": {
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/douglaszaltron/peapods-packets",
+    "directory": "tree/main/packages/design-system/peapods-utils"
+  }
+}

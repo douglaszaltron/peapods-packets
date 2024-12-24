@@ -1,0 +1,20 @@
+{
+  "name": "@peapods/biome-config",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Peapods Team",
+  "description": "Biome configuration for React projects.",
+  "type": "module",
+  "exports": {
+    "./base": "./base.json",
+    "./recommended": "./recommended.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/douglaszaltron/peapods-packets",
+    "directory": "tree/main/packages/tooling/biome-config"
+  }
+}

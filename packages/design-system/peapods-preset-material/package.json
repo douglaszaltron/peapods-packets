@@ -1,0 +1,44 @@
+{
+  "name": "@peapods/preset-material",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Peapods Team",
+  "description": "Material Design preset configuration.",
+  "main": "src/material.config.tsx",
+  "files": ["dist/**"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "check": "biome check",
+    "format": "biome check --write",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@peapods/biome-config": "workspace:^",
+    "@peapods/typescript-config": "workspace:^",
+    "@peapods/preset-base": "workspace:^",
+    "@mui/material": "^6.3.0"
+  },
+  "peerDependencies": {
+    "@peapods/preset-base": "workspace:^",
+    "@mui/material": "^6.0.0"
+  },
+  "tsup": {
+    "entry": ["src/**/*@(ts|tsx)"],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "dts": true,
+    "format": ["cjs"],
+    "treeshake": true
+  },
+  "publishConfig": {
+    "main": "dist/material.config.js",
+    "types": "dist/material.config.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/douglaszaltron/peapods-packets",
+    "directory": "tree/main/packages/design-system/peapods-preset-material"
+  }
+}

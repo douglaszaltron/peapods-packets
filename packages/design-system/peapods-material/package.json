@@ -1,0 +1,48 @@
+{
+  "name": "@peapods/material",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Peapods Team",
+  "description": "A Material UI-based component library that implements the Design System. It offers production-ready React components following our design principles and guidelines.",
+  "main": "src/index.ts",
+  "files": ["dist/**"],
+  "scripts": {
+    "build": "tsup",
+    "check": "biome check",
+    "format": "biome check --write",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@peapods/biome-config": "workspace:^",
+    "@peapods/typescript-config": "workspace:^",
+    "@peapods/utils": "workspace:^",
+    "@mui/material": "^6.3.0",
+    "@mui/utils": "^6.3.0",
+    "react": "^19.0.0"
+  },
+  "peerDependencies": {
+    "@mui/material": "^6.0.0",
+    "@mui/utils": "^6.0.0",
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "tsup": {
+    "entry": ["src/index.ts"],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "dts": true,
+    "format": "cjs",
+    "external": ["react"]
+  },
+  "publishConfig": {
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/douglaszaltron/peapods-packets",
+    "directory": "tree/main/packages/design-system/peapods-material"
+  }
+}

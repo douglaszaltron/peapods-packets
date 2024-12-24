@@ -1,0 +1,36 @@
+{
+  "name": "playground",
+  "private": true,
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "check": "biome check",
+    "format": "biome check --fix --unsafe",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.3.0",
+    "@mui/material": "^6.3.0",
+    "@peapods/data-grid-material": "workspace:*",
+    "@peapods/material": "workspace:*",
+    "@peapods/preset-material": "workspace:*",
+    "@peapods/utils": "workspace:*",
+    "@tanstack/react-query": "^5.62.10",
+    "@tanstack/react-table": "^8.20.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@peapods/biome-config": "workspace:*",
+    "@peapods/typescript-config": "workspace:*",
+    "@rsbuild/core": "^1.1.12",
+    "@rsbuild/plugin-react": "^1.1.0",
+    "@rsbuild/plugin-svgr": "^1.0.6"
+  }
+}

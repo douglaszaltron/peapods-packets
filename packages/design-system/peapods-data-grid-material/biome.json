@@ -1,0 +1,3 @@
+{
+  "extends": ["@peapods/biome-config/base"]
+}

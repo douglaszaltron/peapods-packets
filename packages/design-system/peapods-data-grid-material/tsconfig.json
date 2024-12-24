@@ -1,0 +1,7 @@
+{
+  "extends": "@peapods/typescript-config/react-library.json",
+  "compilerOptions": {
+    "types": ["vitest/globals"]
+  },
+  "include": ["src", "vitest.setup.ts"]
+}

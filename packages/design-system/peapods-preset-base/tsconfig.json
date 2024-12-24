@@ -1,0 +1,10 @@
+{
+  "extends": "@peapods/typescript-config/base.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": false,
+    "outDir": "dist"
+  },
+  "include": ["dist/**/*.ts"],
+  "files": ["dist/variables.ts"]
+}

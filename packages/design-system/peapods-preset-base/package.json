@@ -1,0 +1,50 @@
+{
+  "name": "@peapods/preset-base",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Peapods Team",
+  "description": "Core package containing shared design tokens and base configurations for consistent theming.",
+  "main": "dist/variables.js",
+  "module": "dist/variables.mjs",
+  "types": "dist/variables.d.ts",
+  "style": "dist/variables.css",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "types": "./dist/variables.d.ts",
+      "import": "./dist/variables.mjs",
+      "require": "./dist/variables.js",
+      "style": "./dist/variables.css"
+    },
+    "./scss": "./dist/variables.scss",
+    "./css": "./dist/variables.css",
+    "./json": "./dist/variables.json"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist .turbo",
+    "prebuild": "pnpm clean",
+    "build": "pnpm build:sd && pnpm build:ts",
+    "build:sd": "style-dictionary build --config config.mjs",
+    "build:ts": "tsc",
+    "check": "biome check",
+    "format": "biome check --write"
+  },
+  "devDependencies": {
+    "@peapods/biome-config": "workspace:^",
+    "@peapods/typescript-config": "workspace:^",
+    "style-dictionary": "^4.3.0",
+    "prettier": "^3.4.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/variables.js",
+    "module": "dist/variables.mjs",
+    "types": "dist/variables.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/douglaszaltron/peapods-packets",
+    "directory": "tree/main/packages/design-system/peapods-preset-base"
+  }
+}

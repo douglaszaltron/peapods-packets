@@ -1,0 +1,23 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
+    },
+    "storybook": {
+      "dependsOn": ["^build"]
+    },
+    "check": {},
+    "format": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "test": {},
+    "coverage": {},
+    "clean": {
+      "cache": false
+    }
+  }
+}
